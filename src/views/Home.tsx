@@ -1,15 +1,18 @@
 import React from "react";
-
+import Header from "../components/header/Header";
 type Props = {};
 
 const Home: React.FC = (props: Props) => {
-  return <div>Home</div>;
+  return (
+    <div>
+      <Header />
+    </div>
+  );
 };
 
 const homeLoader = () => {
-    alert("homeLoader");
+  alert("homeLoader");
 };
-
 
 export default Home;
 
