@@ -7,7 +7,7 @@ const Footer = () => {
       <footer className="bg-neutral-100 text-center text-neutral-600 dark:bg-neutral-600 dark:text-neutral-200 lg:text-left">
         <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
           <div className="mr-12 hidden lg:block">
-            <span>Get connected with us on social networks:</span>
+            <span>Hãy kết nối với chúng tôi trên các mạng xã hội:</span>
           </div>
           {/* <!-- Social network icons container --> */}
           <div className="flex justify-center">
@@ -110,9 +110,10 @@ const Footer = () => {
                 TW elements
               </h6>
               <p>
-                Here you can use rows and columns to organize your footer
-                content. Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit.
+                Phenikaa-Edu là một nền tảng chuyên cung cấp dịch vụ tạo đề và
+                chấm thi trắc nghiệm trực tuyến. Chúng tôi cam kết mang đến cho
+                bạn các công cụ và tài liệu chất lượng, giúp bạn dễ dàng tạo ra
+                các bài kiểm tra trắc nghiệm chất lượng cao và hiệu quả.
               </p>
             </div>
             {/* <!-- Products section --> */}
@@ -122,22 +123,22 @@ const Footer = () => {
               </h6>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Angular
+                  Ngân hàng câu hỏi
                 </a>
               </p>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  React
+                  Lớp học
                 </a>
               </p>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Vue
+                  Đề thi trắc nghiệm
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Laravel
+                  Bài giảng, Tài liệu
                 </a>
               </p>
             </div>
@@ -148,22 +149,22 @@ const Footer = () => {
               </h6>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Pricing
+                  Hướng dẫn quản trị
                 </a>
               </p>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Settings
+                  Bảng giá dịch vụ
                 </a>
               </p>
               <p className="mb-4">
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Orders
+                  Bảng giá tên miền
                 </a>
               </p>
               <p>
                 <a href="#!" className="text-neutral-600 dark:text-neutral-200">
-                  Help
+                  Cộng đồng sử dụng
                 </a>
               </p>
             </div>

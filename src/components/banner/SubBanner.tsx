@@ -13,9 +13,9 @@ const SubBanner = () => {
               Khám phá và Đo lường Sự Sẵn Sàng của Bạn
             </p>
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Quis tellus eget adipiscing convallis sit sit eget aliquet quis.
-              Suspendisse eget egestas a elementum pulvinar et feugiat blandit
-              at. In mi viverra elit nunc.
+              Ngân hàng câu hỏi được sắp sếp một cách khoa học theo kiến trúc
+              cây thư mục. Giúp người dùng dễ dàng truy suất, tạo nguồn đầu vào
+              cho việc tạo đề thi trắc nghiệm online một cách dễ dàng.
             </p>
           </div>
           <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -38,11 +38,10 @@ const SubBanner = () => {
                       />
                     </svg>
                   </div>
-                  Push to deploy
+                  Ngân hàng câu hỏi
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Morbi viverra dui mi arcu sed. Tellus semper adipiscing
-                  suspendisse semper morbi. Odio urna massa nunc massa.
+                  Dễ dàng tạo và quản lý ngân hàng câu hỏi theo từng chủ đề.
                 </dd>
               </div>
               <div className="relative pl-16">
@@ -63,11 +62,11 @@ const SubBanner = () => {
                       />
                     </svg>
                   </div>
-                  SSL certificates
+                  Bài giảng, Tài liệu
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Sit quis amet rutrum tellus ullamcorper ultricies libero dolor
-                  eget. Sem sodales gravida quam turpis enim lacus amet.
+                  Tạo và quản lý bài giảng, hỗ trợ nhiều định dạng khác nhau
+                  video, doc, excel...
                 </dd>
               </div>
               <div className="relative pl-16">
@@ -88,11 +87,12 @@ const SubBanner = () => {
                       />
                     </svg>
                   </div>
-                  Simple queues
+                  Đề thi trắc nghiệm
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Quisque est vel vulputate cursus. Risus proin diam nunc
-                  commodo. Lobortis auctor congue commodo diam neque.
+                  Tạo và xuất bản đề thi dễ dàng từ ngân hàng câu hỏi của bạn.
+                  Hỗ trợ nhiều loại đề thi từ file tài liệu có sẵn, tạo đề thi
+                  theo ma trận tự ngân hàng câu hỏi.
                 </dd>
               </div>
               <div className="relative pl-16">
@@ -113,12 +113,11 @@ const SubBanner = () => {
                       />
                     </svg>
                   </div>
-                  Advanced security
+                  Lớp học
                 </dt>
                 <dd className="mt-2 text-base leading-7 text-gray-600">
-                  Arcu egestas dolor vel iaculis in ipsum mauris. Tincidunt
-                  mattis aliquet hac quis. Id hac maecenas ac donec pharetra
-                  eget.
+                  Tạo và quản lý nhóm, lớp học thuận tiện. Dễ dàng giao các bài
+                  giảng, đề thi trắc nghiệm đã tạo cho từng nhớm, lớp học.
                 </dd>
               </div>
             </dl>

@@ -2,6 +2,8 @@ import React from "react";
 import Header from "../components/header/Header";
 import SubBanner from "../components/banner/SubBanner";
 import Footer from "../components/footer/Footer";
+import Benner from "../assets/benner.png";
+
 type Props = {};
 
 const Home: React.FC = (props: Props) => {
@@ -10,7 +12,7 @@ const Home: React.FC = (props: Props) => {
       <Header />
       <img
         className="w-[60%] mt-10 m-auto"
-        src="https://riki.edu.vn/kiem-tra-trinh-do-tieng-nhat/img/banner1_pc.png"
+        src={Benner}
         alt="random"
       />
       <SubBanner />

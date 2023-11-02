@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
 const IsLoginHeader = (props: Props) => {
-  const [stateUserLogin, setStateUserLogin] = useState(true);
+  const navigate = useNavigate();
+  const [stateUserLogin, setStateUserLogin] = useState(false);
   const [stateShowSubMenu, setStateShowSubMenu] = useState(false);
   return (
     <React.Fragment>
@@ -106,7 +108,10 @@ const IsLoginHeader = (props: Props) => {
         </div>
       ) : (
         <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-          <button className="hover:bg-blue-200 active:translate-y-[0.1rem] bg-blue-100 text-blue-700 shadow-lg shadow-indigo-500/50 outline-1 text-sm font-semibold rounded-md px-6 py-2">
+          <button
+            className="hover:bg-blue-200 active:translate-y-[0.1rem] bg-blue-100 text-blue-700 shadow-lg shadow-indigo-500/50 outline-1 text-sm font-semibold rounded-md px-6 py-2"
+            onClick={() => navigate("/auth")}
+          >
             Đăng nhập
           </button>
         </div>
