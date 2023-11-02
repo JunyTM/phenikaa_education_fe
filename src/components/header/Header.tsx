@@ -1,11 +1,12 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import IsLoginHeader from "./IsLoginHeader";
 
 type Props = {};
 
 const Header = (props: Props) => {
   return (
-    <div className="sticky top-0 drop-shadow-md">
+    <div className="sticky top-0 drop-shadow-md z-50">
       <nav className="bg-slate-100 ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
@@ -70,25 +71,25 @@ const Header = (props: Props) => {
               <div className="hidden sm:ml-6 sm:block">
                 <div className="flex space-x-4">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                  <a
-                    href="#"
+                  <Link
+                    to="/"
                     className="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                     aria-current="page"
                   >
                     Trang chủ
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/question"
                     className="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                   >
                     Tạo đề thi
-                  </a>
-                  <a
-                    href="#"
+                  </Link>
+                  <Link
+                    to="/exam"
                     className="text-gray-700 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold"
                   >
                     Vào luyện thi
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -4,7 +4,8 @@ import Home, { homeLoader } from "../views/Home";
 import Auth from "../views/Auth";
 import Login from "../components/layouts/Login";
 import Regist from "../components/layouts/Regist";
-import Exam from "../views/Exam";
+import ExamList from "../views/ExamList";
+import QuestionGroup from "../views/QuestionGroup";
 import NotFound from "../views/NotFound";
 
 const router = createBrowserRouter([
@@ -17,7 +18,8 @@ const router = createBrowserRouter([
     path: "auth",
     element: <Auth />,
   },
-  { path: "exam", element: <Exam /> },
+  { path: "exam", element: <ExamList /> },
+  { path: "question", element: <QuestionGroup /> },
   { path: "login", element: <Login /> },
   { path: "register", element: <Regist /> },
   { path: "404", element: <NotFound /> },

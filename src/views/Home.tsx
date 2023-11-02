@@ -10,11 +10,9 @@ const Home: React.FC = (props: Props) => {
   return (
     <div>
       <Header />
-      <img
-        className="w-[60%] mt-10 m-auto"
-        src={Benner}
-        alt="random"
-      />
+      <div className="w-full h-[500px] pt-10 bg-green-300">
+        <img className="w-[60%] m-auto" src={Benner} alt="random" />  
+      </div>
       <SubBanner />
       <Footer />
     </div>
