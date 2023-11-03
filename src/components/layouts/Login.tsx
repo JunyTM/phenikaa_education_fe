@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import Cookies from "js-cookie";
+import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
+  const navigate = useNavigate();
   const handelSubmit = () => {
-    alert("submit");
+    Cookies.set("AccessToken", "Đẫ đăng nhập thành công");
+    // navigate("/#");
   };
 
   return (
@@ -20,7 +24,7 @@ const Login: React.FC = () => {
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
-        <form className="space-y-6" action="#" method="POST">
+        <form className="space-y-6" action="/">
           <div>
             <label
               htmlFor="email"

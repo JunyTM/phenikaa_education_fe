@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useLayoutEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
 
 type Props = {};
 
@@ -7,6 +8,21 @@ const IsLoginHeader = (props: Props) => {
   const navigate = useNavigate();
   const [stateUserLogin, setStateUserLogin] = useState(false);
   const [stateShowSubMenu, setStateShowSubMenu] = useState(false);
+
+  useLayoutEffect(() => {
+    const AccessToken = Cookies.get("AccessToken");
+    if (AccessToken) {
+      setStateUserLogin(true);
+    }
+  }, []);
+
+  const handelLogout = () => {
+    Cookies.remove("AccessToken");
+    setStateUserLogin(false);
+    setStateShowSubMenu(false);
+    navigate("/#");
+  };
+
   return (
     <React.Fragment>
       {stateUserLogin ? (
@@ -93,15 +109,15 @@ const IsLoginHeader = (props: Props) => {
                 >
                   Thiết lập
                 </a>
-                <a
-                  href="#"
-                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white"
+                <button
+                  className="w-full block px-4 py-2 text-sm text-gray-700 hover:bg-gray-700 hover:text-white"
                   role="menuitem"
                   tabIndex={-1}
                   id="user-menu-item-2"
+                  onClick={handelLogout}
                 >
                   Đăng xuất
-                </a>
+                </button>
               </div>
             ) : null}
           </div>
