@@ -35,7 +35,7 @@ const ExamList: React.FC = (props: Props) => {
             {istQuestionGroup?.map((val: any) => {
               console.log("kiểm tra");
               if (val.groupName.includes(search)) {
-                return <ExamItem groupName={val.groupName} />;
+                return <ExamItem groupId={val.id} groupName={val.groupName} />;
               }
             })}
 

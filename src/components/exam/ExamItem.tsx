@@ -1,17 +1,20 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-
 type Props = {
+  groupId: number;
   groupName: string;
 };
 
 const ExamItem = (props: Props) => {
   const navigate = useNavigate();
   return (
-    <button className="group relative" onClick={() => {
-      navigate("/detail");
-    }}>
+    <button
+      className="group relative"
+      onClick={() => {
+        navigate("/detail", { state: { groupId: props.groupId } });
+      }}
+    >
       <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
         <img
           src="https://phenikaa.edu.vn/wp-content/uploads/2021/10/z2822538189956_d314e5d77daf6f16fadccf1195be105e-1092x533.jpg"

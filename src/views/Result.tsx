@@ -10,7 +10,7 @@ const Result = (props: Props) => {
 
   const score = receivedData?.score;
   const total = receivedData?.summary;
-    const percent = (score / total) * 100;
+  const percent = ((score / total) * 100).toFixed(2);
 
   return (
     <div>

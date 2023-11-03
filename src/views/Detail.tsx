@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useLayoutEffect } from "react";
 import { fetchData } from "../utils";
-import { Loader } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import QuestionPublic from "../components/questionPublic/QuestionPublicItem";
 type Props = {};
 
@@ -10,15 +9,17 @@ const Detail = (props: Props) => {
   const [listQuestionGroup, setListQuestionGroup] = useState([]);
   const [listAnswer, setListAnswer] = useState<any>([]);
   const [score, setScore] = useState<number>(0);
+  const location = useLocation();
+  const groupId = location.state?.groupId;
+
   const navigate = useNavigate();
   useLayoutEffect(() => {
-    const respone1 = fetchData("group/42");
+    const respone1 = fetchData("group/" + groupId);
     respone1.then((res) => {
-      console.log("res xxxx:", res.data.data);
       setGroupQuestion(res.data.data);
     });
 
-    const respone2 = fetchData("question/42");
+    const respone2 = fetchData("question/" + groupId);
     respone2.then((res) => {
       setListQuestionGroup(res.data.data);
     });
@@ -38,7 +39,7 @@ const Detail = (props: Props) => {
     navigate("/result", {
       state: {
         score: score,
-        summary: questionGroup.length,
+        summary: questionGroup.length - 1,
         groupQuestion: groupQuestion,
       },
     });
@@ -72,6 +73,9 @@ const Detail = (props: Props) => {
 
         <div className="w-[80%] h-full bg-slate-100 mt-12 m-auto rounded-lg">
           {questionGroup?.map((val: any, index: any) => {
+            if (index === questionGroup.length - 1) {
+              return null;
+            }
             return (
               <QuestionPublic
                 index={index + 1}
