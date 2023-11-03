@@ -1,49 +1,38 @@
-import axios from "axios";
-
-type Props = {
-  path: string;
-  method: "GET" | "POST" | "PUT" | "DELETE";
-  headers: {
-    [key: string]: string;
-  };
-  body?: any;
-};
+import axios, { AxiosResponse } from "axios";
+import { ResponseModel } from "../model";
 
 const URL = import.meta.env.VITE_REACT_BASE_URL;
 
-const Requets = async (props: Props) => {
-  switch (props.method) {
-    case "GET":
-      await axios
-        .get(URL + "/" + props.path)
-        .then((response) => {
-          return response.data;
-        })
-        .catch((error) => {
-          console.log("Get request:", error);
-        });
-      break;
-    case "POST":
-      await axios
-        .post(URL + "/" + props.path, props.body)
-        .then((response) => {
-          return response.data;
-        })
-        .catch((error) => {
-          console.log("Post request:", error);
-        });
-      break;
-    case "PUT":
-      await axios
-        .put(URL + "/" + props.path, props.body)
-        .then((response) => {
-          return response.data;
-        })
-        .catch((error) => {
-          console.log("Put request:", error);
-        });
-      break;
+const fetchData = async (path: string): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse<ResponseModel> = await axios.get(
+      URL + "/" + path
+    );
+    console.log(response);
+    return response;
+  } catch (error: any) {
+    throw new Error("Lỗi khi gọi API: " + error.message);
   }
 };
 
-export default Requets;
+const postData = async (path: string, data: any): Promise<AxiosResponse> => {
+  try {
+    const response: AxiosResponse<ResponseModel> = await axios.post(
+      URL + "/" + path,
+      data
+    );
+    console.log(response);
+    return response;
+  } catch (error: any) {
+    throw new Error("Lỗi khi gọi API: " + error.message);
+  }
+};
+
+const getGroupQuestion = () => {
+  return fetchData("group");
+};
+
+const  createQuestionGroup = (data: any) => {
+  return postData("group", data);
+};
+export { getGroupQuestion, createQuestionGroup, postData, fetchData };

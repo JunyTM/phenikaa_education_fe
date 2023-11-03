@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 
-type Props = {};
+type Props = {
+  setSearch: any; 
+};
 
 const ExemBoxType = (props: Props) => {
   const [isShow, setIsShow] = useState(false);
@@ -93,6 +95,7 @@ const ExemBoxType = (props: Props) => {
         required
         className="ml-5 mr-2 w-80 min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-2 ring-inset ring-indigo-100 sm:text-sm sm:leading-6"
         placeholder="Bạn muốn tìm gì ?"
+        onChange={(e) => props.setSearch(e.target.value)}
       ></input>
     </div>
   );

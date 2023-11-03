@@ -2,15 +2,20 @@ import React from "react";
 import Cookies from "js-cookie";
 import Login from "../components/layouts/Login";
 
+// import React from "react";
+// import Cookies from "js-cookie";
+// import Login from "../components/layouts/Login";
+
 const AccessToken = Cookies.get("AccessToken");
 
 type Props = {
-  children?: React.ReactNode;
+  children?: any;
 };
 
-const Auth: React.FC = (props: Props) => {
+const Auth: React.FC<Props> = ({ children }) => {
   return (
-    <React.Fragment>{AccessToken ? props.children : <Login />}</React.Fragment>
+    // <React.Fragment>{AccessToken ? children : <Login />}</React.Fragment>
+    <React.Fragment>{true ? children : <Login />}</React.Fragment>
   );
 };
 

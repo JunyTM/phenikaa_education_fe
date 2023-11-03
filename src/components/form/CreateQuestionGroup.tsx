@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
-type Props = {};
+type Props = {
+  setGroupName: any;
+};
 
 const CreateQuestionGroup = (props: Props) => {
   return (
@@ -31,6 +33,8 @@ const CreateQuestionGroup = (props: Props) => {
                   autoComplete="username"
                   className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                   placeholder="VD: Kiểm tra lập trình"
+                  onChange={(e) => props.setGroupName(e.target.value)}
+                  required
                 />
               </div>
             </div>
@@ -59,7 +63,7 @@ const CreateQuestionGroup = (props: Props) => {
       </div>
       <h1 className="text-2xl font-semibold leading-10 text-gray-900">
         Danh sách câu hỏi
-      </h1> 
+      </h1>
     </div>
   );
 };
